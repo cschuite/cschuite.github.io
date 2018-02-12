@@ -1,0 +1,29 @@
+@media only screen and (min-width: 650px) {
+	#horizontal {
+		display: block;
+		width: 98%;
+		height: auto;
+  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+	}
+	#vertical {
+		display: inline-block;
+		width: 46%;
+		height: auto;
+  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+	}
+}
+@media only screen and (min-width: 1000px) {
+	#horizontal{
+		display: block;
+		width: 98%;
+		height: auto;
+  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+  	}
+	#vertical{
+		display: inline-block;
+		width: 46%;
+		height: auto;
+  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+
+	}
+}
