@@ -1,4 +1,5 @@
 @media only screen and (min-width: 650px) {
+
 	div.photo-grid {
 		box-sizing: border-box;
 		display: flex;
@@ -8,15 +9,15 @@
 		align-items: center;
 	}
 
-	img.resp-img-horizontal {
+	div.photo-cell {
 		box-sizing: border-box;
-*/		width: 100%;
+		width: 100%;
 		height: auto;
   		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
 	}
-	img.resp-img-vertical {
+	div.photo-cell-vertical {
 		box-sizing: border-box;
-*/		width: 50%;
+		width: 50%;
 		height: auto;
   		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
 	}
@@ -31,17 +32,17 @@
 		align-items: center;
 	}
 
-	img.resp-img-horizontal {
-		box-sizing: border-box;
-		width: 100%;
-/*		height: auto;
-  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);*/
-  	}
-	.resp-img-vertical {
+	div.photo-cell {
 		box-sizing: border-box;
 		width: 50%;
-/*		height: auto;
+		height: auto;
   		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
-*/
+  	}
+	div.photo-cell-vertical {
+		box-sizing: border-box;
+		width: 25%;
+		height: auto;
+  		box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+
 	}
 }
