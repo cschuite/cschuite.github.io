@@ -8,10 +8,12 @@ body {
 }
 
 .jumbotron {
-	background-image: "url(img/background.jpg)"
+	background-image: url("img/background.jpg")
 }
 
+.top-nav {
 
+}
 /*changes for medium screens*/
 @media only screen and (min-width: 650px) {
 
@@ -19,5 +21,7 @@ body {
 
 /*changes for large screens*/
 @media only screen and (min-width: 1000px) {
+	.top-nav {
 
+	}
 }
