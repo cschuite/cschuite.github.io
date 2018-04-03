@@ -36,12 +36,13 @@ p {
 	width: 20vw;
 	text-align: center;
 	display: inline-block;
-	padding-top: .5em;
-	padding-right: 2em;
-	padding-left: 2em;
+	padding-bottom: .5vh;
+	padding-right: 5vw;
+	padding-left: 5vw;
 }
 
 .nav-element a {
+	font-size: medium;
 	color: white;
 	text-decoration: none;
 }
@@ -188,6 +189,11 @@ footer {
 		grid-template-rows: 1fr 1fr;
 	}
 
+	.nav-element a {
+		padding-bottom: .5vh;
+		padding-top: .5vh;
+	}
+
 	.big-pic {
 		grid-column-start: 1;
 		grid-column-end: auto;
@@ -216,10 +222,19 @@ footer {
 		justify-content: center;
 	}
 
-	.librarian-photo {
+	figure {
 		width: 25vw;
 		height: 25vh;
 		padding: 2em;
+	}
+
+	figcaption {
+		text-align: center;
+	}
+
+	.librarian-photo {
+		width: 25vw;
+		height: auto;
 	}
 
 	.librarian-photo img {
@@ -269,7 +284,6 @@ footer {
 	}
 
 	.other-librarian-images a {
-		margin-left: 5vh;
 		margin-right: 5vh;
 	}
 
