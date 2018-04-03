@@ -3,15 +3,20 @@
 	margin: 0;
 }
 
-body {
-	font-family: "Quicksand", sans-serif;
+body, h1, p, a {
+	font-family: "Arvo", serif;
 }
 
-.big-pic {
-	background-image: url("../img/background.jpg")
-	height: 50vh;
-	width: 95vw;
+h1 {
+	letter-spacing: 1px;
 }
+
+p {
+	width: 90vw;
+	margin: auto;
+}
+
+/*nav styling*/
 
 .top-nav {
 	height: 5vh;
@@ -20,55 +25,434 @@ body {
 	opacity: 0.8;
 }
 
-.top-nav ul li a {
+.list-items {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-element {
+	width: 20vw;
+	text-align: center;
 	display: inline-block;
-	width: 33vw;
+	padding-top: .5em;
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+.nav-element a {
 	color: white;
 	text-decoration: none;
 }
 
-a {
-	color: black;
-	text-decoration: none;
+.nav-self a {
+	color: FireBrick;
 }
 
-.nav-self {
-	color: blue;
-}
+/*styling of the content element from an in class exercise*/
 .nav-self:before {
   	content: "\27A4  ";
-	color: blue;
+	color: FireBrick;
 }
 
-.social-links {
+/*styling main sections of pages*/
+/*main page specific*/
+.grid-items {
+	height: 90vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+/*about page specific*/
+.about-body {
+	height: 90vh;
+}
+
+.about-body h1 {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/*main page specific*/
+
+.big-pic {
+	background-image: url("../img/shoes.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	grid-column-start: 1;
+	grid-column-end: auto;
+	grid-row-start: 1;
+	grid-row-end: span 1;
+	opacity: .8;
+}
+
+.big-pic h1 {
+	color: white;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 1em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*hiding elements only there for tablet view*/
+
+.other-librarian-photos {
+	display: none;
+}
+
+.main-page-photos {
+	display: none;
+}
+
+.other-librarian {
+	display: hidden;
+}
+
+.librarian-link {
+	display: flex;
+	width: 100vw;
+	height: 15vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.librarian-link a {
+	color: black;
+	text-decoration: none;
+	font-size: large;
+}
+
+footer {
 	height: 5vh;
 	width: 100vw;
 	background-color: black;
 	opacity: 0.8;	
 }
 
-.social-links .fab, .social-links p {
+.fab, footer p {
 	color: white;
+	margin: auto;
+	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+}
+
+.fab {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.current-img {
+	width: 100vw;
+	height: 40vh;
+	object-fit: cover;
+}
+
+.librarian-name {
+	text-align: center;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+.other-librarian-images {
+	display: none;
+}
+
+.other-librarian-links {
+	padding-top: 2vh;
+}
+
+.other-librarian-links a {
+	display: block;
+	color: black;
+	text-decoration: underline;
+	text-align: center;
+	padding-bottom: 1vh;
 }
 
 /*changes for medium screens*/
 @media only screen and (min-width: 650px) {
+	.grid-items {
+		height: 90vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.big-pic {
+		grid-column-start: 1;
+		grid-column-end: auto;
+		grid-row-start: 1;
+		grid-row-end: auto;
+	}
+
+	.big-pic h1 {
+		color: white;
+		font-size: 4em;
+	}
+
+	.main-page-links {
+		display: none;
+	}
+
+	.main-page-photos {
+		grid-column-start: 1;
+		grid-column-end: auto;
+		grid-row-start: 2;
+		grid-row-end: auto;
+		display: flex;
+		width: 100vw;
+		height: 45vh;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.librarian-photo {
+		width: 25vw;
+		height: 25vh;
+		padding: 2em;
+	}
+
+	.librarian-photo img {
+		height: auto;
+		width: 100%;
+	}
+
+	.current-img {
+		display: inline-block;
+		height: 40vh;
+		width: auto;
+		padding-top: 5vh;
+		padding-left: 5vh;
+	}
+
+	.librarian-name {
+		display: inline-block;
+		position: relative;
+		bottom: 18vh;
+		left: 3vw;
+		padding: 0px;
+	}
+
+	.first {
+		padding-top: 1vh;
+	}
+
+	.other-librarian-links {
+		display: none
+	}
+
+	.other-librarian-images {
+		padding-top: 2vh;
+		width: 100vw;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		padding-bottom: 2vh;
+	}
+
+	.other-librarian-images a, .other-librarian-images a img {
+		width: 25vh;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.other-librarian-images a {
+		margin-left: 5vh;
+		margin-right: 5vh;
+	}
+
+	.librarian-caption {
+		text-align: center;
+	}
 
 }
 
 /*changes for large screens*/
 @media only screen and (min-width: 1000px) {
-	.top-nav ul li {
-		display: inline-block;
+
+	.grid-items {
+		height: 95vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 
-	.top-nav {
-		
+	/*placing things in the grid*/
+
+	.main-page-photos {
+		display: none;
+	}
+
+	.main-page-links {
+		display: grid;
+		grid-column-start: 1;
+		grid-column-end: auto;
+		grid-row-start: 2;
+		grid-row-end: auto;
 	}
 
 	.big-pic {
-		background-image: url("../img/background.jpg")
-		height:95vh;
-		width: 80vw;
+		background-image: url("../img/shoes.jpg");
+		grid-column-start: 2;
+		grid-column-end: span 3;
+		grid-row-start: 1;
+		grid-row-end: span 2;
+		border-left: 1px solid black;
+	}
+
+	header {
+		width: 25vw;
+		grid-column-start: 1;
+		grid-column-end: auto;
+		grid-row-start: 1;
+		grid-row-end: auto;
+	}
+
+	.top-nav {
+		width: 25vw;
+		height: 0vh;
+		background-color: white;
+	}
+
+	.list-items {
+		padding-top: 10vh;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/*changing slightly for librarian pages*/
+
+	.list-items-lib {
+		width: 35vw;
+		padding-top: 2vh;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	.nav-element {
+		display: flex;
+		width: 25vw;
+		height: 5vh;
+		text-align: center;
+		justify-content: center;
+	}
+
+	/*changing slightly for librarian pages*/ 
+
+	.narrow {
+		display: inline-block;
+		height: 4vh;
+		width: 35vw;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.nav-element a {
+		color: black;
+		text-decoration: none;
+		font-size: large;
+		padding-left: 0vw;
+		padding-right: 0vw;
+	}
+
+	.nav-self a {
+		color: FireBrick;
+	}
+
+	.big-pic h1 {
+		font-size: 6em;
+	}
+
+	.main-page-links {
+		height: 20vh;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		padding-top: 10vh;
+	}
+
+	.librarian-link {
+		display: flex;
+		width: 20vw;
+		height: 5vh;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	/*for librarian pages*/
+
+	.librarian-page {
+		width: 100vw;
+		height: 95vh;
+		overflow: hidden;
+	}
+
+	.current-img {
+		display: inline-block;
+		height: 95vh;
+		width: 65vw;
+		padding: 0px;
+		position: relative;
+		left: 35vw;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	.librarian-name {
+		display: inline-block;
+		width: 35vw;
+		height: 10vh;
+		position: relative;
+		bottom: 78vh;
+		left: 0;
+		box-sizing: border-box;
+	}
+
+	.librarian-text {
+		height: 0vh;
+	}
+
+	.librarian-text p {
+		display: inline-block;
+		width: 35vw;
+		box-sizing: border-box;
+		padding-left: 2vw;
+		padding-right: 2vw;
+		padding-bottom: 2vh;
+		position: relative;
+		bottom: 80vh;
+	}
+
+	.other-librarian-images {
+		display: none;
+	}
+
+	.other-librarian-links {
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
+		height: 0vh;
+		width: 35vw;
+		margin: auto;
+		bottom: 20vh;
 	}
 }

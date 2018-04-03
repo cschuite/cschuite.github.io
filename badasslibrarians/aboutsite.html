@@ -5,20 +5,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
 	<header>
 	<nav class="top-nav">
-		<ul>
-			<li><a href = "index.html">Home</a></li>
-			<li class = "nav-self">About This Site</li>
-			<li><a href = "aboutme.html">About Me</a></li>
-		</ul>
+		<div class="list-items">
+			<ul>
+			<li class="nav-element"><a href = "index.html">Home</a></li>
+			<li class = "nav-self nav-element"><a href="aboutsite.html">About This Site</a></li>
+			<li class="nav-element"><a href = "aboutme.html">About Me</a></li>
+			</ul>
+		</div>
 	</nav>
 	</header>
+		<div class="about-body">
 		<h1>About This Site</h1>
-		<p>How to choose just a few badass librarians from the thousands that have existed over the centuries?</p>
+		<p>How to choose just a few badass librarians from the thousands that have existed over the centuries?</p><br>
 		<p>I started by limiting it to just librarians from modern times. Sorry, Casanova and Ben Franklin! I also wanted to focus on people who are known primarily as librarians, so children's authors Madeleine L'Engle and Beverly Cleary, politicians Golda Meir and J. Edgar Hoover, and First Lady Laura Bush all had to go. In the end, I decided to narrow the search to three women who have redefined libraries as places of activism and innovation. Check them out below.</p>
 		<div class = "main-page-photos">
 			<a href="nancy-pearl.html"><img src = "img/nancypearl.jpg" alt = "Photo of Nancy Pearl" class = "librarian-photo"></a>
@@ -26,15 +30,18 @@
 			<a href="jessamyn-west.html"><img src = "img/jessamynwest.jpg" alt = "Photo of Jessamyn West" class = "librarian-photo"></a>
 		</div>
 		<div class = "main-page-links">
-			<a href="nancy-pearl.html" class="librarian-link">Nancy Pearl</a>
-			<a href="carla-hayden.html" class="main-page-librarian-link">Carla Hayden</a>
-			<a href="jessamyn-west.html" class="libraian-link">Jessamyn West</a>
+			<div class="librarian-link"><a href="nancy-pearl.html">Nancy Pearl</a></div>
+			<div class="librarian-link"><a href="carla-hayden.html">Carla Hayden</a></div>
+			<div class="librarian-link"><a href="jessamyn-west.html">Jessamyn West</a></div>
+		</div>
 		</div>
 	<footer>
 		<p>Site designed by Caroline Schuitema</p>
-		<span class = "fab fa-facebook-square"></span>
-		<span class = "fab fa-linkedin"></span>
-		<span class = "fab fa-instagram"></span>
+		<div class="social-links">
+		<a href="http://www.facebook.com/caroline.schuitema.9"><span class = "fab fa-facebook-square"></span></a>
+		<a href="https://www.linkedin.com/in/caroline-schuitema-8a0766129/"><span class = "fab fa-linkedin"></span></a>
+		<a href="https://www.instagram.com/carolineschuitema"><span class = "fab fa-instagram"></span></a>
+		</div>
 	</footer>
 </body>
 </html>
