@@ -22,7 +22,7 @@ p {
 	height: 5vh;
 	width: 100vw;
 	background-color: black;
-	opacity: 0.8;
+	opacity: .8;
 }
 
 .list-items {
@@ -34,11 +34,11 @@ p {
 
 .nav-element {
 	width: 20vw;
-	text-align: center;
 	display: inline-block;
-	padding-bottom: .5vh;
-	padding-right: 5vw;
-	padding-left: 5vw;
+	text-align: center;
+	margin-bottom: .5vh;
+	margin-right: 5vw;
+	margin-left: 5vw;
 }
 
 .nav-element a {
@@ -47,13 +47,13 @@ p {
 	text-decoration: none;
 }
 
+/*styling of the content element inspired by an in class exercise*/
 .nav-self a {
 	color: FireBrick;
 }
 
-/*styling of the content element from an in class exercise*/
 .nav-self:before {
-  	content: "\27A4  ";
+  	content: "\2605  ";
 	color: FireBrick;
 }
 
@@ -97,6 +97,7 @@ p {
 	text-align: center;
 	padding-top: 1em;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	box-sizing: border-box;
 }
 
 /*hiding elements only there for tablet view*/
@@ -128,14 +129,17 @@ p {
 }
 
 footer {
-	height: 5vh;
+	height: auto;
+	min-height: 5vh;
 	width: 100vw;
 	background-color: black;
 	opacity: 0.8;	
+	position: static;
 }
 
 .fab, footer p {
 	color: white;
+	height: auto;
 	margin: auto;
 	text-align: center;
 }
@@ -162,6 +166,7 @@ footer {
 	text-align: center;
 	padding-top: 1vh;
 	padding-bottom: 1vh;
+	box-sizing: border-box;
 }
 
 .other-librarian-images {
@@ -178,6 +183,33 @@ footer {
 	text-decoration: underline;
 	text-align: center;
 	padding-bottom: 1vh;
+}
+
+/*changes to put elements in focus for accessibility*/
+
+.nav-self:hover:before, .nav-self:focus:before {
+	content: none;
+}	
+
+.nav-element a:focus, .nav-element a:hover, .librarian-link a:focus, .librarian-link a:hover {
+	color: DarkCyan;
+}
+
+.nav-element a:focus:before, .nav-element a:hover:before, .librarian-link a:focus:before, .librarian-link a:hover:before {
+  	content: "\2606  ";
+	color: DarkCyan;
+	box-sizing: border-box;	
+}
+
+.social-links a:focus .fab, .social-links a:hover .fab {
+	color: DarkCyan;
+	transform: rotate(360deg);
+	transition-duration: 1s;
+}
+
+.librarian-photo:hover img, .librarian-photo:focus img, .other-librarian-photo:hover img, .other-librarian-photo:focus img {
+	width: 27vw;
+	height: auto;
 }
 
 /*changes for medium screens*/
@@ -225,7 +257,8 @@ footer {
 	figure {
 		width: 25vw;
 		height: 25vh;
-		padding: 2em;
+		margin: 2em;
+		box-sizing: border-box;
 	}
 
 	figcaption {
@@ -275,15 +308,15 @@ footer {
 		justify-content: center;
 		overflow: hidden;
 		padding-bottom: 2vh;
+		box-sizing: border-box;
 	}
 
-	.other-librarian-images a, .other-librarian-images a img {
-		width: 25vh;
+	.other-librarian-photo, .other-librarian-photo img {
+		width: 25vw;
 		height: auto;
-		overflow: hidden;
 	}
 
-	.other-librarian-images a {
+	.other-librarian-photo {
 		margin-right: 5vh;
 	}
 
@@ -297,7 +330,8 @@ footer {
 @media only screen and (min-width: 1000px) {
 
 	.grid-items {
-		height: 95vh;
+		height: 96vh;
+		overflow: hidden;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -337,6 +371,7 @@ footer {
 	.top-nav {
 		width: 25vw;
 		height: 0vh;
+		min-height:0vh;
 		background-color: white;
 	}
 
