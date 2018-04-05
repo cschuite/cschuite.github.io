@@ -19,7 +19,8 @@ p {
 /*nav styling*/
 
 .top-nav {
-	height: 5vh;
+	height: auto;
+	min-height: 5vh;
 	width: 100vw;
 	background-color: black;
 	opacity: .8;
@@ -68,7 +69,7 @@ p {
 
 /*about page specific*/
 .about-body {
-	height: 90vh;
+	height: auto;
 }
 
 .about-body h1 {
@@ -133,8 +134,9 @@ footer {
 	min-height: 5vh;
 	width: 100vw;
 	background-color: black;
-	opacity: 0.8;	
+	opacity: .8;
 	position: static;
+	bottom: 0;
 }
 
 .fab, footer p {
@@ -180,36 +182,64 @@ footer {
 .other-librarian-links a {
 	display: block;
 	color: black;
-	text-decoration: underline;
+	text-decoration: none;
 	text-align: center;
 	padding-bottom: 1vh;
+	font-size: large;
+}
+
+.other-librarian-links a:before {
+	content: "\27A3  ";
 }
 
 /*changes to put elements in focus for accessibility*/
 
-.nav-self:hover:before, .nav-self:focus:before {
-	content: none;
-}	
+	
 
-.nav-element a:focus, .nav-element a:hover, .librarian-link a:focus, .librarian-link a:hover {
+.nav-element a:focus, .nav-element a:hover, .librarian-link a:focus, .librarian-link a:hover, .other-librarian-links a:hover, .other-librarian-links a:focus {
 	color: DarkCyan;
+	outline: none;
 }
 
-.nav-element a:focus:before, .nav-element a:hover:before, .librarian-link a:focus:before, .librarian-link a:hover:before {
+.nav-self a:hover:before, .nav-self a:focus:before {
+	content: none;
+}
+
+.nav-element a:focus:before, .nav-element a:hover:before, .librarian-link a:focus:before, .librarian-link a:hover:before, .other-librarian-links a:hover:before, .other-librarian-links a:focus:before {
   	content: "\2606  ";
 	color: DarkCyan;
 	box-sizing: border-box;	
 }
 
+/*taken from w3 schools website*/ 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .social-links a:focus .fab, .social-links a:hover .fab {
+	outline: none;
 	color: DarkCyan;
-	transform: rotate(360deg);
-	transition-duration: 1s;
+	animation: shake .75s;
 }
 
 .librarian-photo:hover img, .librarian-photo:focus img, .other-librarian-photo:hover img, .other-librarian-photo:focus img {
 	width: 27vw;
 	height: auto;
+	outline: none;
+}
+
+.librarian-photo:hover, .librarian-photo:focus, .other-librarian-photo:hover, .other-librarian-photo:focus, .social-links a:focus, .social-links a:hover {
+	outline: none;
 }
 
 /*changes for medium screens*/
@@ -330,9 +360,9 @@ footer {
 @media only screen and (min-width: 1000px) {
 
 	.grid-items {
-		height: 96vh;
-		overflow: hidden;
-		display: grid;
+		height: 95vh;
+/*		overflow: hidden;
+*/		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 	}
@@ -366,6 +396,7 @@ footer {
 		grid-column-end: auto;
 		grid-row-start: 1;
 		grid-row-end: auto;
+		text-align: center;
 	}
 
 	.top-nav {
@@ -373,6 +404,14 @@ footer {
 		height: 0vh;
 		min-height:0vh;
 		background-color: white;
+	}
+
+	.nav-element {
+		display: flex;
+		width: 25vw;
+		height: 5vh;
+		text-align: center;
+		justify-content: center;
 	}
 
 	.list-items {
@@ -394,16 +433,6 @@ footer {
 		justify-content: center;
 		box-sizing: border-box;
 	}
-
-	.nav-element {
-		display: flex;
-		width: 25vw;
-		height: 5vh;
-		text-align: center;
-		justify-content: center;
-	}
-
-	/*changing slightly for librarian pages*/ 
 
 	.narrow {
 		display: inline-block;
@@ -431,6 +460,7 @@ footer {
 
 	.main-page-links {
 		height: 20vh;
+		width: 25vw;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
@@ -440,7 +470,7 @@ footer {
 
 	.librarian-link {
 		display: flex;
-		width: 20vw;
+		width: 22	vw;
 		height: 5vh;
 		align-items: center;
 		justify-content: center;
@@ -503,5 +533,43 @@ footer {
 		width: 35vw;
 		margin: auto;
 		bottom: 20vh;
+	}
+
+	/*for about pages*/
+
+	.about-body {
+		height: 95vh;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.about-headers {
+		grid-column-start: 2;
+		grid-column-end: auto;
+		grid-row-start: 1;
+		grid-row-end: auto;
+		width: 50vw;
+		margin: auto;
+		text-align: center;
+		font-size: 4em;
+		padding-left: 3em;
+		box-sizing: border-box;
+		color: DarkCyan;
+	}
+
+	.about-text {
+		grid-column-start: 2;
+		grid-column-end: span 3;
+		grid-row-start: 2;
+		grid-row-end: auto;
+		width: 75vw;
+	}
+
+	.about-text p {
+		width: 75vw;
+		padding-right: 5vw;
+		box-sizing: border-box;
 	}
 }
