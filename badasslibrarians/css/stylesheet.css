@@ -555,7 +555,11 @@ footer {
 		height: 0vh;
 		width: 35vw;
 		margin: auto;
-		bottom: 20vh;
+		bottom: 24vh;
+	}
+
+	.other-librarian-links a {
+		padding-bottom: 2vh;
 	}
 
 	/*for about pages*/
