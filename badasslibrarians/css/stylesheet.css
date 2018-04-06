@@ -434,7 +434,7 @@ footer {
 	}
 
 	.nav-element {
-		display: flex;
+		display: inline-block;
 		width: 25vw;
 		height: 5vh;
 		text-align: center;
