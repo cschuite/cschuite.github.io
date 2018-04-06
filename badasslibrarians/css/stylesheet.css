@@ -525,6 +525,7 @@ footer {
 		left: 35vw;
 		overflow: hidden;
 		box-sizing: border-box;
+		opacity: .9;
 	}
 
 	.librarian-name {
