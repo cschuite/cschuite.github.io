@@ -242,6 +242,12 @@ footer {
 	outline: none;
 }
 
+/*decoration*/
+
+.book-photo {
+	display: none;
+}
+
 /*changes for medium screens*/
 @media only screen and (min-width: 650px) {
 	.grid-items {
@@ -379,6 +385,23 @@ footer {
 		grid-column-end: auto;
 		grid-row-start: 2;
 		grid-row-end: auto;
+	}
+
+	.book-photo {
+		background-image: url("../img/book-icon.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: grid;
+		width: 23vw;
+		height: 20vh;
+		grid-column-start: 1;
+		grid-column-end: auto;
+		grid-row-start: 2;
+		grid-row-end: auto;
+		position: relative;
+		bottom: 15vh;
+		left: 2vw;
+		box-sizing: border-box;
 	}
 
 	.big-pic {
@@ -553,7 +576,7 @@ footer {
 		width: 50vw;
 		margin: auto;
 		text-align: center;
-		font-size: 4em;
+		font-size: 6em;
 		padding-left: 3em;
 		box-sizing: border-box;
 		color: DarkCyan;
@@ -570,6 +593,7 @@ footer {
 	.about-text p {
 		width: 75vw;
 		padding-right: 5vw;
+		font-size: large;
 		box-sizing: border-box;
 	}
 }
