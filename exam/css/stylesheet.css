@@ -1,0 +1,20 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#centering {
+	display: inline-block;
+	width: 49vw;
+}
+
+img {
+	display: inline-block;
+	border: 5px solid blue;
+	padding: 5%;
+	width: 49vw;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+
