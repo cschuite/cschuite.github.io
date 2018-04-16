@@ -1,11 +1,11 @@
 * {
 	margin: 0px;
 	padding: 0px;
+
 }
 
-#centering {
-	display: inline-block;
-	width: 49vw;
+body {
+	background-image: url("../images/circles-light/circles-light.png");
 }
 
 img {

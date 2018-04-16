@@ -6,19 +6,20 @@
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<script type="text/javascript">
 	function remove() {
-		document.getElementById("disappears").style.display = "none"
-		document.getElementById("centering").style.width = "98vw"
+		document.getElementById("disappears").style.display = "none";
+		document.getElementById("stays").style.marginRight = "25vw";
+		document.getElementById("stays").style.marginLeft = "25vw";
 	}
 	function show() {
-		document.getElementById("disappears").style.display="inline-block"
-		document.getElementById("centering").style.width = "49vw"
+		document.getElementById("disappears").style.display="inline-block";
+		document.getElementById("stays").style.margin = "0 auto";
 	}
 	</script>
 </head>
 <body>
 	<h1>Caroline Schuitema</h1>
 	<img src="images/examPic.JPG" alt="Photo of Colleen and friends posing with wooden dinosaur" id="disappears">
-	<div id="centering"><img src="images/UMSI-logo.jpg" alt="University of Michigan School of Information logo" id="stays"></div>
+	<img src="images/UMSI-logo.jpg" alt="University of Michigan School of Information logo" id="stays">
 	<br>
 	<button type="button" onclick="remove()">Hide Image</button>
 	<button type="button" onclick="show()">Show Image</button>
